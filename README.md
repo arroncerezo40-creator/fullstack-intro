@@ -1,27 +1,24 @@
-Full Stack Development - Lab 1
-Project Overview
-This repository contains the foundational structure for a MERN stack application. This project demonstrates my understanding of client-server architecture and the separation of concerns in web development.
+# Full Stack Development Lab 1
 
-1. System Architecture & Flow
-The application follows a standard MERN stack architecture:
+## Project Overview
+This project sets up the foundation for a MERN stack application.
 
-Frontend (UI Layer): Built with React. This is the client-side interface that captures user inputs and displays data returned from the server.
+## 1. Client-Server Architecture
+The MERN stack architecture allows for a separation of concerns between the user interface and the data processing.
 
-Backend (Server Layer): Built with Node.js and Express. This layer acts as the API, handling client requests, processing business logic, and querying the database.
+### Components:
+* **Client (Browser):** The user's entry point that renders the UI and communicates with the server.
+* **Frontend (UI Layer):** Built with technologies like React, this layer handles user interactions and display logic.
+* **Backend (Server Layer):** Built with Node.js and Express, this acts as the API that processes requests, executes business logic, and handles data transmission.
+* **Database (MongoDB):** A NoSQL database that persists application data.
 
-Database (Data Layer): MongoDB. This is a NoSQL database used to persist application data.
+### Request Flow:
+1. The **Client** sends an HTTP request (GET, POST, etc.) to the **Backend**.
+2. The **Backend** receives the request, processes it, and communicates with **MongoDB** to retrieve or store information.
+3. The **Backend** returns a response (usually JSON) to the **Client**.
+4. The **Frontend** receives the response and updates the user interface accordingly.
 
-Request Flow:
-
-The Client (Browser) sends an HTTP request to the Backend (Server).
-
-The Backend processes the request and communicates with the Database (MongoDB) to read or write data.
-
-The Database returns the data to the Backend.
-
-The Backend sends the requested data back to the Client in JSON format, which the Frontend then renders for the user.
-
-2. Environment Setup
-IDE: Visual Studio Code is being used for development, chosen for its excellent support for JavaScript, Node.js, and version control.
-
-Directory Structure: The project is modularized into frontend/ and backend/ directories to maintain a clean separation of code.
+## 2. Project Structure
+The repository is organized to separate the client and server environments:
+* `/frontend`: Contains the client-side code.
+* `/backend`: Contains the server-side code.
